@@ -1,0 +1,25 @@
+.HotLink{
+    width: 80%;
+    margin: auto;
+    text-align: left;
+    border-collapse: collapse;
+    border-width: 2px;
+    margin-bottom: 50px;
+    tbody{
+        th{
+            font-weight: 400;
+        }
+        tr:nth-child(odd){
+            background: #dddada;
+        }
+    }
+    td, th{        
+        padding: 5px;
+    }
+    
+}
+
+.Title{
+    margin-top: 60px;
+    text-align: center;    
+}

@@ -11,9 +11,9 @@ export default function CreateWrapper() {
     const [msg, setMsg] = useState({text: "", status: "GREEN"})
     const [loading, setLoading] = useState(false)
 
-    const handleSubmit = async () => {
-        setLoading(true)
+    const handleSubmit = async () => {        
         if (!isValidUrl(root)) return setMsg({text: "URL không hợp lệ", status: "RED"})
+        setLoading(true)
         const res = await createLink({root, slug})
         console.log(res.data)
         res.data.status == "GREEN"
@@ -50,7 +50,7 @@ export default function CreateWrapper() {
                 className={s.Toggle}
                 onClick={() => setShow(!show)}
             >Tùy chọn</button>
-            <div className={s.Option}>
+            <div className={`${s.Option} ${show && s.show}`}>
                 <label htmlFor="custom">Custom link: </label>
                 <input 
                     className={s.CustomLink}
