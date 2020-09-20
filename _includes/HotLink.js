@@ -17,7 +17,7 @@ export default function HotLink() {
 
     return (
         <>
-            <h2 className={s.Title}>Link mới nóng hổi</h2>
+            <center><h2 className={s.Title}>Link mới nóng hổi</h2></center>
             <table className={s.HotLink}>
                 <thead>
                     <tr>
