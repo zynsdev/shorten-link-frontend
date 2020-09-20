@@ -14,7 +14,7 @@
             font-size: 2rem;
             color: #3f3e3e;
         }
-        input{
+        input{            
             flex-grow: 1;
             margin: 0 15px;
             font-family: 'Nunito', sans-serif;
@@ -97,4 +97,20 @@
 @keyframes spin{
     0% {transform: rotate(0);}
     100% {transform: rotate(360deg);}
+}
+
+@media (max-width: 700px){
+    .CreateWrapper{
+        .Basic{
+            flex-direction: column;
+            .Icon{
+                display: none;
+            }
+            input{
+                text-align: center;
+                width: 100%;
+                margin: 10px 0;
+            }
+        }
+    }
 }
