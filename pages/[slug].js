@@ -5,12 +5,14 @@ export default function RedirectRoot() {
 
     const redirectToRoot = async () => {
         const slug = window.location.pathname.toString().slice(1)
-        const res = await axios.get(`${process.env.NEXT_PUBLIC_SERVER_URL}/links/${slug}`)
-        
+        const res = await axios.get(`${process.env.NEXT_PUBLIC_SERVER_URL}/links/${slug}`)        
         if (res.data.status == "GREEN") {
-            return window.location.href = `http://${res.data.link.root}`
+            let url = res.data.link.root;
+            if (url.slice(0, 8) != 'https://') url = 'https://' + url;
+            window.location.href = url;
+            return;
         } else {
-            alert("Đường dẫn này không tồn tại")
+            return alert("Đường dẫn này không tồn tại")
         }
     }
 
