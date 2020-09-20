@@ -1,0 +1,14 @@
+.Title{
+    font-family: 'Righteous', cursive;
+    text-align: center;
+    padding: 50px 0 30px 0;
+    margin: 0;
+    font-size: 2.4rem;    
+    letter-spacing: 1px;
+    color: #2b2a2a;
+    text-shadow: 1px 2px 0 #ffeadb;
+    &::after{
+        content: "_";
+        color: #ec6636;
+    }
+}
